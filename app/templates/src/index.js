@@ -1,7 +1,7 @@
 const <%= variable %> = {
-  greet() {
-    return 'hello';
-  }
-};
+    greet() {
+        return 'hello'
+    }
+}
 
-export default <%= variable %>;
+export default <%= variable %>

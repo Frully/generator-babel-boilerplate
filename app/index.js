@@ -25,7 +25,7 @@ module.exports = generators.Base.extend({
   prompting: function() {
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the ' + chalk.red('Babel Library Boilerplate') + ' generator!'
+      'Welcome to the ' + chalk.red('Frully Boilerplate') + ' generator!'
     ));
 
     this.username = '';

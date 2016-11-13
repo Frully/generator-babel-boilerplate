@@ -1,17 +1,20 @@
 {
-  "extends": "./setup/.globals.json",
+  "plugins": ["ava"],
   "parserOptions": {
-    "ecmaVersion": 6,
+    "ecmaVersion": 8,
     "sourceType": "module"
   },
   "rules": {
-    "strict": 0,
-    "quotes": [2, "single"],
-    "no-unused-expressions": 0
+    "strict": "off",
+    "semi": ["error", "never"],
+    "quotes": ["warn", "single"],
+    "no-unused-expressions": 0,
+    "ava/no-only-test": "warn",
+    "ava/no-skip-test": "warn",
+    "ava/no-skip-assert": "warn"
   },
+  "extends": "plugin:ava/recommended",
   "env": {
-    "browser": true,
-    "node": true,
-    "mocha": true
+    "node": true
   }
 }

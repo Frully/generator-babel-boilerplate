@@ -1,18 +1,7 @@
-import <%= variable %> from '../../src/<%= repo %>';
+import test from 'ava'
 
-describe('<%= variable %>', () => {
-  describe('Greet function', () => {
-    beforeEach(() => {
-      spy(<%= variable %>, 'greet');
-      <%= variable %>.greet();
-    });
+import <%= variable %> from '../../src/<%= repo %>'
 
-    it('should have been run once', () => {
-      expect(<%= variable %>.greet).to.have.been.calledOnce;
-    });
-
-    it('should have always returned hello', () => {
-      expect(<%= variable %>.greet).to.have.always.returned('hello');
-    });
-  });
-});
+test('<%= variable %>.greet() should have returned hello', t => {
+    t.is(<%= variable %>.greet(), 'hello')
+})
